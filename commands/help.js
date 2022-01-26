@@ -47,6 +47,18 @@ exports.run = (client, message, args) => {
                 value: `O comando informa à latência atual do bot.`,
         
                 },
+                {
+
+                    name: '.feeback',
+                    value: `O comando reporta um feedback para o meu dev.`,
+            
+                    },
+                    {
+
+                        name: '.bug',
+                        value: `O comando reporta um bug para o meu dev.`,
+                
+                        },
     )
         
     message.channel.send(embed);
