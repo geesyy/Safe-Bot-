@@ -33,9 +33,22 @@ exports.run = (client, message, args) => {
         value: `O comando descreve todas as atualizações do bot.`,
 
         },
+        
+        {
+
+            name: '.uptime',
+            value: `O comando diz quanto tempo o bot está online.`,
+    
+            },
+
+            {
+
+                name: '.ping',
+                value: `O comando informa à latência atual do bot.`,
+        
+                },
     )
         
     message.channel.send(embed);
 
     }
-

@@ -35,6 +35,12 @@ exports.run = (client, message, args) => {
             name: '.tempmute',
             value: `O tempmute tem a mesma função dos comandos: mute, unmute. Porém, mais prático.`,
         },
+        {
+
+            name: '.say',
+            value: `O comando faz com que o bot deixe uma mensagem.`,
+    
+            },
     )
         
     message.channel.send(embed);
