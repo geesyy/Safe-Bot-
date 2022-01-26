@@ -1,28 +1,35 @@
-const Discord = require("discord.js");
- 
-exports.run = async (bot, message, args) => {
-    let user = message.author.username
-  if (!message.member.permissions.has("MANAGE_MESSAGES"))
-    return message.reply(
-      "🚨 | Você não tem permissão para limpar essas mensagens, desculpe."
-    );
-    
-  const deleteCount = parseInt(args[0], 10);
-  if (!deleteCount || deleteCount < 1 || deleteCount > 99)
-    return message.reply(
-        "🚨 | Forneça um número de até *99 mensagens*."
-      );
- 
-  const fetched = await message.channel.messages.fetch({
-    limit: deleteCount + 1
-  });
-  message.channel.bulkDelete(fetched); {
-      let embed = new Discord.MessageEmbed()
-      .setDescription(`**♻️ O chat foi Limpo.**`)
-      .setColor('BLUE')
-      .setTitle('`CLEAR`')
-      .setThumbnail('https://imgur.com/Qxc4Lcr.gif')
-      .setFooter(`• Faxineiro: ${message.author.username}`, message.author.displayAvatarURL({format: "png"}));
-      await message.channel.send(embed); 
-  }
+const { MessageEmbed } = require('discord.js');
+
+module.exports = {
+	name: 'clear',
+	category: 'moderation',
+	run: async (client, message, args) => {
+		if (!message.member.permissions.has('MANAGE_MESSAGES')) {
+			return message.channel.send(
+				`Você não tem permissão para limpar o chat, ${message.author.username}`, // returns this message to user with no perms
+			);
+		}
+		if (!args[0]) {
+			return message.channel.send('Por favor, insira um número valido entre 1 e 100.');
+		}
+
+		let deleteAmount = parseInt(args[0], 10);
+
+		if (Number.isNaN(deleteAmount)) {
+			return message.channel.send('Por favor, insira um número válido entre 1 e 100.');
+		}
+
+		// could use ternary
+		if (deleteAmount > 100) {
+			deleteAmount = 100;
+		} else {
+			deleteAmount = parseInt(args[0], 10);
+		}
+
+		await message.channel.bulkDelete(deleteAmount, true);
+
+		const embed = new MessageEmbed()
+    .setDescription(`**♻️ O chat foi limpo.**`)
+		return message.channel.send(embed);
+	},
 };
