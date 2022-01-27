@@ -7,7 +7,7 @@ module.exports = {
 
     async run (bot, message, args) {
 
-        if(!args[0]) return message.reply('Por favor coloque um razão em seu feedback!')
+        if(!args[0]) return message.reply('Por favor coloque um razão em seu feedback!').then((m) => m.delete({ timeout: 5000 }));
 
         message.reply(`✉ | Obrigado pelo feedback! :)`)
 
