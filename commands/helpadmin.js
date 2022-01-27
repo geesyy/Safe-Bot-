@@ -41,6 +41,18 @@ exports.run = (client, message, args) => {
             value: `O comando faz com que o bot deixe uma mensagem.`,
     
             },
+            {
+
+                name: '.unban',
+                value: `O comando faz com que uma pessoa seja desbanida do servidor.`,
+        
+                },
+                {
+
+                    name: '.total-bans',
+                    value: `O comando mostra a quantidade de pessoas banidas no servidor.`,
+            
+                    },
     )
         
     message.channel.send(embed);
