@@ -9,31 +9,24 @@ exports.run = (client, message, args) => {
     .addFields(
         {
             name: '.avatar',
-            value: `Esse comando foi feito para ver o avatar de uma pessoa em png.`,
+            value: `Foi feito para ver o avatar de uma pessoa em png.`,
             
         },
         {
             name: '.botinfo',
-            value: `O comando descreve as informações do bot.`,
+            value: `Descreve as informações do bot.`,
             
         },
         {
             name: '.serverinfo',
-            value: `O comando descreve as informações de um servidor.`,
+            value: `Descreve as informações de um servidor.`,
             
         },
         {
             name: '.helpadmin',
-            value: `O comando descreve as informações dos comandos de um admin.`,
+            value: `Descreve as informações dos comandos de um admin.`,
             
         },
-        {
-
-        name: '.atualizações',
-        value: `O comando descreve todas as atualizações do bot.`,
-
-        },
-        
         {
 
             name: '.uptime',
@@ -44,23 +37,30 @@ exports.run = (client, message, args) => {
             {
 
                 name: '.ping',
-                value: `O comando informa à latência atual do bot.`,
+                value: `Informa à latência atual do bot.`,
         
                 },
                 {
 
                     name: '.feeback',
-                    value: `O comando reporta um feedback para o meu dev.`,
+                    value: `Reporta um feedback para o meu dev.`,
             
                     },
                     {
 
                         name: '.bug',
-                        value: `O comando reporta um bug para o meu dev.`,
-                
+                        value: `Reporta um bug para o meu dev.`,
+    
+                        },
+                    {
+
+                        name: '.comunidade',
+                        value: `Indica o convite do nosso discord oficial.`,
+        
                         },
     )
         
     message.channel.send(embed);
 
     }
+
