@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
     .addFields(
         {
             name: '.avatar',
-            value: `Esse comando foi feito para ver o avatar de uma em png.`,
+            value: `Esse comando foi feito para ver o avatar de uma pessoa em png.`,
             
         },
         {
