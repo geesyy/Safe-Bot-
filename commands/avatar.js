@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
  
   let embed = new Discord.MessageEmbed() 
     .setColor(`#16d151`) 
-    .setTitle(`Avatar de ${user.username}`) 
+    .setTitle(`Avatar de ${user.tag}`) 
     .setImage(avatar) 
     .setFooter(`• Autor: ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}));
  await message.channel.send(embed); 
