@@ -8,53 +8,53 @@ exports.run = (client, message, args) => {
     .setFooter(` Lista de comandos. `)
     .addFields(
         {
-            name: '.avatar',
+            name: 's!avatar',
             value: `Foi feito para ver o avatar de uma pessoa em png.`,
             
         },
         {
-            name: '.botinfo',
+            name: 's!botinfo',
             value: `Descreve as informações do bot.`,
             
         },
         {
-            name: '.serverinfo',
+            name: 's!serverinfo',
             value: `Descreve as informações de um servidor.`,
             
         },
         {
-            name: '.helpadmin',
+            name: 's!helpadmin',
             value: `Descreve as informações dos comandos de um admin.`,
             
         },
         {
 
-            name: '.uptime',
+            name: 's!uptime',
             value: `O comando diz quanto tempo o bot está online.`,
     
             },
 
             {
 
-                name: '.ping',
+                name: 's!ping',
                 value: `Informa à latência atual do bot.`,
         
                 },
                 {
 
-                    name: '.feeback',
+                    name: 's!feeback',
                     value: `Reporta um feedback para o meu dev.`,
             
                     },
                     {
 
-                        name: '.bug',
+                        name: 's!bug',
                         value: `Reporta um bug para o meu dev.`,
     
                         },
                     {
 
-                        name: '.comunidade',
+                        name: 's!comunidade',
                         value: `Indica o convite do nosso discord oficial.`,
         
                         },
