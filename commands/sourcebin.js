@@ -4,7 +4,7 @@ module.exports = {
    name: 'sourcebin',
    run: async (client, message, args) => {
 
-       if (!args.join(' ')) return message.reply('digite alguma coisa para gerar seu sourcebin.')
+       if (!args.join(' ')) return message.reply('digite alguma coisa para gerar seu sourcebin.').then((m) => m.delete({ timeout: 5000 }));
 
       sourcebin.create([{
       name: `Code by ${message.author.tag}`,
