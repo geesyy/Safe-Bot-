@@ -3,6 +3,9 @@ const config = require("./config.json");
 const bot = new Discord.Client();
 const express = require("express");
 
+
+
+
 const app = express();
 app.get("/", (request, response) => {
   const ping = new Date();
@@ -30,18 +33,18 @@ bot.on('message', message => {
     commandFile.run(bot, message, args);
   } catch (err) {
     const embed = new Discord.MessageEmbed()
-    .setColor('GREEN')
-    .setDescription(`${message.author}, O comando não foi adicionado, portanto ele não consta no banco de dados.\nUtilize *.help* para saber meus comandos.`)
+    .setColor('Random')
+    .setDescription(`${message.author}, o comando não foi encontrado, utilize *s!help* para saber meus comandos.`)
     return message.channel.send(embed);
   }
 });
 
 //status
 bot.on('ready', () => {
-  console.log('Estou online, apartir de agora poderá executar os comandos.');
+  console.log('Fui iniciado com sucesso, pode executar os comandos.');
   var tabela = [
     { name: 'Estou online, utilize .help e saiba mais.', type: 'PLAYING' },
-    { name: 'Oi, eu sou o Safe Bot, estou on-line agora.', type: 'WATCHING' }
+    { name: 'Acesse nosso site, e fique por dentro de tudo em nossa comunidade.', type: 'PLAYING' }
   ];
 
   function setStatus() {
