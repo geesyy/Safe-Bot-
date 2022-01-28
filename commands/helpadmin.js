@@ -8,48 +8,48 @@ exports.run = (client, message, args) => {
     .setFooter(` Lista de comandos. `)
     .addFields(
         {
-            name: '.ban',
+            name: 's!ban',
             value: `O comando executa o banimento do player.`,
         },
         {
-            name: '.clear',
+            name: 's!clear',
             value: `O comando limpa o chat.`,
         },
         {
-            name: '.addrole',
+            name: 's!addrole',
             value: `O comando adiciona tag ao usuário.`,
         },
         {
-            name: '.removerole',
+            name: 's!removerole',
             value: `O comando pode retirar tag de um usuário.`,
         },
         {
-            name: '.mute',
+            name: 's!mute',
             value: `O comando silencia certa pessoa.`,
         },
         {
-            name: '.unmute',
+            name: 's!unmute',
             value: `O comando desmuta uma pessoa que estava silenciada.`,
         },
         {
-            name: '.tempmute',
+            name: 's!tempmute',
             value: `O tempmute tem a mesma função dos comandos: mute, unmute. Porém, mais prático.`,
         },
         {
 
-            name: '.say',
+            name: 's!say',
             value: `O comando faz com que o bot deixe uma mensagem.`,
     
             },
             {
 
-                name: '.unban',
+                name: 's!unban',
                 value: `O comando faz com que uma pessoa seja desbanida do servidor.`,
         
                 },
                 {
 
-                    name: '.total-bans',
+                    name: 's!total-bans',
                     value: `O comando mostra a quantidade de pessoas banidas no servidor.`,
             
                     },
